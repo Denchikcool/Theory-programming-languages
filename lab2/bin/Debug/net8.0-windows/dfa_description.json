@@ -1,0 +1,24 @@
+{
+    "states": ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+    "alphabet": ["0", "1"],
+    "start_state": "q0",
+    "accept_states": "q7",
+    "transitions": [
+        {"from": "q0", "input": "0", "to": "q4"},
+        {"from": "q0", "input": "1", "to": "q1"},
+        {"from": "q1", "input": "0", "to": "q2"},
+        {"from": "q1", "input": "1", "to": "q5"},
+        {"from": "q2", "input": "0", "to": "q4"},
+        {"from": "q2", "input": "1", "to": "q3"},
+        {"from": "q3", "input": "0", "to": "q7"},
+        {"from": "q3", "input": "1", "to": "q7"},
+        {"from": "q4", "input": "0", "to": "q0"},
+        {"from": "q4", "input": "1", "to": "q5"},
+        {"from": "q5", "input": "0", "to": "q6"},
+        {"from": "q5", "input": "1", "to": "q1"},
+        {"from": "q6", "input": "0", "to": "q0"},
+        {"from": "q6", "input": "1", "to": "q7"},
+        {"from": "q7", "input": "0", "to": "q3"},
+        {"from": "q7", "input": "1", "to": "q3"}
+    ]
+}
