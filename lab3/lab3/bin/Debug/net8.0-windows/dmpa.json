@@ -1,0 +1,23 @@
+{
+    "states": ["q0", "q1" , "q2"],
+    "input_alphabet": ["a", "b"],
+    "stack_alphabet": ["Z", "A", "B"],
+    "transitions": {
+        "(q0, a, Z)": [ "q1", "AZ" ],
+        "(q0, b, Z)": [ "q1", "BZ" ],
+        "(q0, , Z)": [ "q2", "" ],
+        "(q0, a, A)": [ "q1", "AA" ],
+        "(q0, a, B)": [ "q0", "" ],
+        "(q0, b, A)": [ "q0", "" ],
+        "(q0, b, B)": [ "q1", "BB" ],
+        "(q1, a, A)": [ "q0", "AA" ],
+        "(q1, a, B)": [ "q1", "" ],
+        "(q1, b, A)": [ "q1", "" ],
+        "(q1, b, B)": [ "q0", "BB" ],
+        "(q1, a, Z)": [ "q0", "AZ" ],
+        "(q1, b, Z)": [ "q0", "BZ" ]
+    },
+    "initial_state": "q0",
+    "initial_stack_symbol": "Z",
+    "accepting_states": ["q2"]
+}

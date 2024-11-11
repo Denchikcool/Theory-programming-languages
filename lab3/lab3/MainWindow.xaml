@@ -1,0 +1,29 @@
+﻿<Window x:Class="lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3"
+        mc:Ignorable="d"
+        Title="Проверка цепочек автомата с магазинной памятью" Height="450" Width="800">
+    <Grid x:Name="MainGrid" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Загрузить автомат" Margin="5" Click="LoadAutomaton" Grid.Row="0"/>
+        <Label Content="Введите цепочку:" Margin="5" Grid.Row="1"/>
+        <TextBox x:Name="InputTextBox" Margin="5" Grid.Row="2"/>
+        <Button Content="Проверить цепочку" Margin="5" Click="CheckString" Grid.Row="3"/>
+        <TextBlock Text="История переходов:" Margin="5" Grid.Row="4"/>
+
+        <ScrollViewer Grid.Row="5" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="HistoryTextBlock" Text="" Margin="5" TextWrapping="Wrap"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
